@@ -26,15 +26,10 @@ function getPosition(player, side)
   return pos
 end
 
---Checks if the x, u and z values are greater and lesser then the values in dimensions (boolean respons).
---parameters: 
---pos: The x, y and z you are checking for.
---dimensions: The x, y and z values of the "box" you are checking for.
-
--- (boolean response).
--- Parameters:
---  dimensions: the x, y and z of the box where you want to check for.
---  pos: the current position (x, y and z)of the player you check for
+-- Checks if the x, u and z values are greater or less than the values in dimensions (boolean response).
+-- Parameters: 
+--  pos: The x, y and z you are checking for.
+--  dimensions: The x, y and z values of the "box" you are checking for.
 function checkPos(pos, dimensions)
   if pos["x"] > dimensions["-x"] and pos["x"] < dimensions["+x"] and pos["y"] > dimensions["-y"] and      pos["y"] < dimensions["+y"] and pos["z"] > dimensions["-z"] and pos["z"] < dimensions["+z"] then
     return true
