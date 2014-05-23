@@ -31,8 +31,16 @@ if fs.exists("loginfiles/name.dat") ~= true then
     if name == "" or name == nil then
       enterName()
     else
-      if kit.save(name, "loginfiles/name.dat", "w") then
-        print("Name was saved.")
+      namehash = kit.load("http://lesander.nl/tools/hash.php?s="..name, true)
+      if namehash == "" or namehash == nil then
+        error("Something went wrong loading hash file.")
+      end
+      namehash = textutils.unserialize(namehash)
+      if kit.save(name["hash"], "loginfiles/name.dat", "w") then
+        print("Name hash was saved.")
+      end
+      if kit.save(name["salt"], "loginfiles/namesalt.dat", "w") then
+        print("Name salt was saved.")
       end
     end
   end
@@ -69,7 +77,16 @@ function login()
   term.setTextColor(colors.white)
   print("Username:")
   user = read()
-  if user ~= kit.load("loginfiles/name.dat") then
+  if user == "" or user == nil then
+    login()
+  end
+  salt = kit.load("loginfiles/namesalt.dat")
+  if salt == "" or salt == nil then
+    error("Something went wrong loading name salt file.")
+  end
+  hashuser = kit.load("http://lesander.nl/tools/hash.php?s="..user.."&n="..salt, true)
+  hashuser = textutils.unserialize(hashuser)
+  if user ~= hashuser then
     print("Password:")
     read("*")
     print("Wrong login!")
