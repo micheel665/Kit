@@ -36,10 +36,10 @@ if fs.exists("loginfiles/name.dat") ~= true then
         error("Something went wrong loading hash file.")
       end
       namehash = textutils.unserialize(namehash)
-      if kit.save(name["hash"], "loginfiles/name.dat", "w") then
+      if kit.save(namehash["hash"], "loginfiles/name.dat", "w") then
         print("Name hash was saved.")
       end
-      if kit.save(name["salt"], "loginfiles/namesalt.dat", "w") then
+      if kit.save(namehash["salt"], "loginfiles/namesalt.dat", "w") then
         print("Name salt was saved.")
       end
     end
