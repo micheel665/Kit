@@ -86,7 +86,7 @@ function login()
   end
   hashuser = kit.load("http://lesander.nl/tools/hash.php?s="..user.."&n="..salt, true)
   hashuser = textutils.unserialize(hashuser)
-  if user ~= hashuser then
+  if hashuser ~= kit.load("loginfiles/name.dat") then
     print("Password:")
     read("*")
     print("Wrong login!")
