@@ -1,4 +1,4 @@
--- Kit v1.0 unstable dist. API
+-- Kit v1.0.0 unstable dist. API
 -- Copyright AxTo Inc. Released under the MIT License.
 
 -- Made for ComputerCraft 1.6 and above.
@@ -7,6 +7,11 @@
 -- os.loadAPI("kit")
 -- Now call a function from this file using:
 -- kit.functionName()
+
+-- Returns Kit version (data response).
+function version()
+  return "1.0.0"
+end
 
 -- Chceks if computer is an advanced computer (boolean response).
 function isAdvanced()
