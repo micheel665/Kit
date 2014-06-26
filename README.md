@@ -10,7 +10,7 @@ Download and install the latest version of Kit manually [here](https://github.co
 - OpenKit pastebin install: `pastebin get eqdNPkkb install-openkit`.
 - GuiKit pastebin install: `pastebin get guJxNvsS install-guikit`
 
-> __Heads Up:__ The current versions of Kit, OpenKit and GuiKit are unstable and thus not 100% working and ready for use yet.
+> __Heads Up:__ The current versions of Kit, OpenKit and GuiKit are unstable and could contain typo's, errors and bugs.
 
 # Documentation
 
@@ -40,8 +40,9 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 
 | [Kit Functions](https://github.com/AxTo/Kit/blob/master/README.md#kit-functions) | [OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions) | GuiKit Functions
 |-------| --- | --- | ---
-| [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| drawRectangle()
-| [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)| checkPosition() | button()
+| version()| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| drawRectangle()|
+| [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| checkPosition() | button()
+| [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)|  |
 | [load()](https://github.com/AxTo/Kit/blob/master/README.md#loadpath-isurl)|
 | [save()](https://github.com/AxTo/Kit/blob/master/README.md#savedata-path-method)|
 | [explode()](https://github.com/AxTo/Kit/blob/master/README.md#explodeseperator-string)|
@@ -161,17 +162,34 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 |  cc 1.0 >  | Output all functions of given API. |
 |------------|--------------------------------------------------|
 |Responses:  | Table response *returns false if an error occurs.* |
-|Parameters: | _api_: the library/api to scan. |
-|Example 1:  | `result = kit.scanAPI(myAPI) print( kit.dump(result) )` |
+|Parameters: | _api_: the library/api to scan (required). |
+|Example:  | `result = kit.scanAPI(myAPI) print( kit.dump(result) )` |
 |Result:     | Example: `[1]: "myFunction", [2]: "secondFunction", [3]: "anotherFunction",` |
 
 ----------
 
 ### help()
+| cc 1.0 > | Outputs functions of Kit and a link to the docs.|
+|-----|-----|
+| Responses: | Data response.|
+| Parameters: | none|
+Example 1: | `print(kit.help())`|
+Result: | Welcome to Kit! Visit http://git.io/kitdocs for the documentation. Here's a list of all the functions you can use: ...|
+
 
 ----------
 
 ### clear(screen, pos1, pos2)
+| cc x.x > | Clears your screen and sets cursor position.
+|----|----|
+|Responses: | Boolean (true or false)|
+| Parameters: | _screen_: the screen you want to clear (required).|
+| | _pos1_ and _pos2_: x and y values of where you want the pointer to be after the screen has been reset (optional).|
+|Example 1:| `kit.clear(term)`|
+|Result 1: | The terminal screen gets reset and the pointer to x=1 and y=1.
+|Example 2:| (Assuming that there's a monitor wrapped to `monitor`) `kit.clear(monitor, 1, 5)`|
+|Result 2:| The monitor screen gets reset and the pointer to x=1 and y=5.|
+> __Heads Up:__ You can't use quotes in the clear function: So `kit.clear("term")` is wrong, but `kit.clear(term)` is correct.
 
 ----------
 
