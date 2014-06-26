@@ -33,7 +33,8 @@ guiKit.functionName()
 ```
 
 ## Kit Functions
-Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
+Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries. Click the function names for their documentation.
+> __Heads Up:__ Un-clickable functions in the table of contents don't have any documentation yet.
 
 
 ### Table of Contents
@@ -173,7 +174,7 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 |-----|-----|
 | Responses: | Data response.|
 | Parameters: | none|
-Example 1: | `print(kit.help())`|
+Example 1: | `print( kit.help() )`|
 Result: | Welcome to Kit! Visit http://git.io/kitdocs for the documentation. Here's a list of all the functions you can use: ...|
 
 
