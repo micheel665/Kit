@@ -40,7 +40,7 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 
 | [Kit Functions](https://github.com/AxTo/Kit/blob/master/README.md#kit-functions) | [OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions) | GuiKit Functions
 |-------| --- | --- | ---
-| version()| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| drawRectangle()|
+| [version()](https://github.com/AxTo/Kit/blob/master/README.md#version)| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| drawRectangle()|
 | [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| checkPosition() | button()
 | [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)|  |
 | [load()](https://github.com/AxTo/Kit/blob/master/README.md#loadpath-isurl)|
@@ -50,8 +50,8 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries.
 | [random()](https://github.com/AxTo/Kit/blob/master/README.md#randomlength-digits-upper-lower)|
 | [dump()](https://github.com/AxTo/Kit/blob/master/README.md#dumptable)|
 | [scanAPI()](https://github.com/AxTo/Kit/blob/master/README.md#scanapiapi)
-| help()
-| clear()
+| [help()](https://github.com/AxTo/Kit/blob/master/README.md#help)
+| [clear()](https://github.com/AxTo/Kit/blob/master/README.md#clearscreen-pos1-pos2)
 
 ### isAdvanced()
 
