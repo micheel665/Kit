@@ -53,6 +53,9 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries. Clic
 | [scanAPI()](https://github.com/AxTo/Kit/blob/master/README.md#scanapiapi)
 | [help()](https://github.com/AxTo/Kit/blob/master/README.md#help)
 | [clear()](https://github.com/AxTo/Kit/blob/master/README.md#clearscreen-pos1-pos2)
+| [open()](https://github.com/AxTo/Kit#openside-range) 
+| [close()](https://github.com/AxTo/Kit#closeside-range)
+| [receive()](https://github.com/AxTo/Kit#receivetimeout)
 
 ### isAdvanced()
 
