@@ -1,4 +1,4 @@
-  -- Kit v1.0.0 unstable dist. API
+  -- Kit v1.1.0 unstable dist. API
   -- Copyright AxTo Inc. Released under the MIT License.
   
   -- Made for ComputerCraft 1.6 and above.
