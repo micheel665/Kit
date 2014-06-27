@@ -194,6 +194,37 @@ Result: | Welcome to Kit! Visit http://git.io/kitdocs for the documentation. Her
 
 ----------
 
+### open(side, range)
+| cc x.x > | Opens given modem channels. |
+| --- | --- |
+|Responses: | Boolean (true or false) |
+|Parameters: | _side_: the side where your modem is attached.|
+| | _range_: the range of channels you want to open, separated by a `-`.|
+|Example 1: | `kit.open("back", "1-10")` |
+|Result 1: | The channels 1 to 10 have been opened.|
+|Example 2: | `kit.open("top", "40")` or `kit.open("top", 40)` |
+| Result 2: | The channel 40 has been opened. |
+> __Heads Up:__ The maximum open channels allowed is 128 per computer. When trying to open more, your program will throw an error.
+
+----------
+
+### close(side, range)
+
+Exactly the same as above; `kit.open(side, range)`. Difference is that `kit.close()` (obviously) closes channels instead of opening them.
+
+----------
+
+### receive(timeout)
+| cc x.x > | Listen to opened ports for modem messages. |
+| --- | --- |
+| Responses: | Table data or boolean false if timed out. |
+| Parameters: | _timeout_: in seconds, how long we should wait for a message until exiting the function (optional). _If not defined, the function will wait forever._
+| Example 1: | `result = kit.receive() print( kit.dump(result) )`
+| Result 1: | Example, If a message was intercepted on the opened channels: `{ message = "Hello World!", modem = "back", channel = 40, distance = 2.714829, replyChannel = 666, }`
+| Example 2: | `result = kit.receive(5)`|
+| Result 2: | If no message was intercepted after 5 seconds: `false`, else see result 1.
+----------
+
 ## OpenKit Functions
 
 ### getPosition(player, side) / getPos()
