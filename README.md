@@ -56,14 +56,10 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries. Clic
 | [open()](https://github.com/AxTo/Kit#openside-range) | Open modem channels.
 | [close()](https://github.com/AxTo/Kit#closeside-range) | Close modem channels.
 | [receive()](https://github.com/AxTo/Kit#receivetimeout) | Listen for modem messages on open channels.
-
-[OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions) | Description
-|---|---
+__[OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions)__ | __Description__
 [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| Get current position of a player relative to the sensor.
 |checkPosition() |
-
-GuiKit Functions | Description
-| --- | ---
+__GuiKit Functions__ | __Description__
 |drawRectangle() |
 | button()
 
