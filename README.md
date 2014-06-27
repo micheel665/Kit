@@ -10,7 +10,7 @@ Download and install the latest version of Kit manually [here](https://github.co
 - OpenKit pastebin install: `pastebin get eqdNPkkb install-openkit`.
 - GuiKit pastebin install: `pastebin get guJxNvsS install-guikit`
 
-> __Heads Up:__ The current versions of Kit, OpenKit and GuiKit are unstable and could contain typo's, errors and bugs.
+> __Heads Up:__ The current versions of Kit, OpenKit and GuiKit are unstable and can contain typo's, errors and bugs.
 
 # Documentation
 
@@ -39,23 +39,35 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries. Clic
 
 ### Table of Contents
 
-| [Kit Functions](https://github.com/AxTo/Kit/blob/master/README.md#kit-functions) | [OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions) | GuiKit Functions
-|-------| --- | --- | ---
-| [version()](https://github.com/AxTo/Kit/blob/master/README.md#version)| [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| drawRectangle()|
-| [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| checkPosition() | button()
-| [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)|  |
-| [load()](https://github.com/AxTo/Kit/blob/master/README.md#loadpath-isurl)|
-| [save()](https://github.com/AxTo/Kit/blob/master/README.md#savedata-path-method)|
-| [explode()](https://github.com/AxTo/Kit/blob/master/README.md#explodeseperator-string)|
-| [keyPress()](https://github.com/AxTo/Kit/blob/master/README.md#keypresskey-exitonfalse)|
-| [random()](https://github.com/AxTo/Kit/blob/master/README.md#randomlength-digits-upper-lower)|
-| [dump()](https://github.com/AxTo/Kit/blob/master/README.md#dumptable)|
-| [scanAPI()](https://github.com/AxTo/Kit/blob/master/README.md#scanapiapi)
-| [help()](https://github.com/AxTo/Kit/blob/master/README.md#help)
-| [clear()](https://github.com/AxTo/Kit/blob/master/README.md#clearscreen-pos1-pos2)
-| [open()](https://github.com/AxTo/Kit#openside-range) 
-| [close()](https://github.com/AxTo/Kit#closeside-range)
-| [receive()](https://github.com/AxTo/Kit#receivetimeout)
+| [Kit Functions](https://github.com/AxTo/Kit/blob/master/README.md#kit-functions) | Description | 
+|-------| --- | --- |
+| [version()](https://github.com/AxTo/Kit/blob/master/README.md#version)| Get version of your Kit installation.
+| [isAdvanced()](https://github.com/AxTo/Kit/blob/master/README.md#isadvanced)| Check if PC is advanced.
+| [wrapSides()](https://github.com/AxTo/Kit/blob/master/README.md#wrapsides)| Wrap all attatched peripherals.
+| [load()](https://github.com/AxTo/Kit/blob/master/README.md#loadpath-isurl)| Load a file or web URL.
+| [save()](https://github.com/AxTo/Kit/blob/master/README.md#savedata-path-method)| Save data to a file.
+| [explode()](https://github.com/AxTo/Kit/blob/master/README.md#explodeseperator-string)| Explode a string by seperator.
+| [keyPress()](https://github.com/AxTo/Kit/blob/master/README.md#keypresskey-exitonfalse)| Detect a key press.
+| [random()](https://github.com/AxTo/Kit/blob/master/README.md#randomlength-digits-upper-lower)| Random string generator.
+| [dump()](https://github.com/AxTo/Kit/blob/master/README.md#dumptable)| Dump the contents of a table.
+| [scanAPI()](https://github.com/AxTo/Kit/blob/master/README.md#scanapiapi) | Scan an API for its functions.
+| [help()](https://github.com/AxTo/Kit/blob/master/README.md#help) | Get help info for Kit.
+| [clear()](https://github.com/AxTo/Kit/blob/master/README.md#clearscreen-pos1-pos2) | Clear a screen and set cursor position.
+| [open()](https://github.com/AxTo/Kit#openside-range) | Open modem channels.
+| [close()](https://github.com/AxTo/Kit#closeside-range) | Close modem channels.
+| [receive()](https://github.com/AxTo/Kit#receivetimeout) | Listen for modem messages on open channels.
+
+[OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions) | Description
+|---|---
+[getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| Get current position of a player relative to the sensor.
+|checkPosition() |
+
+GuiKit Functions | Description
+| --- | ---
+|drawRectangle() |
+| button()
+
+----------
 
 ### version()
 
