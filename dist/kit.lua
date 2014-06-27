@@ -106,7 +106,7 @@ end
 --  key: the keypress we should wait for (optional).
 --  exitonfalse: should the function return false if a keypress is not `key`? (optional).
 function keyPress(key, exitonfalse)
-  if key == "" or key == nil then
+  if key == "" or key == nil or string.len(key) > 1 then
     key = "any"
   else
     key = string.lower(key)
@@ -197,7 +197,7 @@ function help()
 end
 
 -- Clear your screen and sets your cursor position (boolean response).
--- Paremeters: 
+-- Parameters: 
 --  screen: what screen you want to clear (required).
 --  pos1, pos2: place you want your cursor to be at after the screen clears (optional).
 function clear(screen, pos1, pos2)
