@@ -39,7 +39,7 @@
   --  isurl: if path is an URL. Use 'true' if path is an URL (optional).
   function load(path, isurl)
     if path == "" or path == nil then
-      error("Invalid arguments for load()")
+      error("Invalid arguments for load()", 2)
     end
     if isurl == true then
       local file = http.get(path)
@@ -69,7 +69,7 @@
   --    "a" to open for writing but keep existing data and append any writes to the end of the file.
   function save(data, path, method)
     if data == "" or data == nil or path == "" or path == nil or method == "" or method == nil then
-      error("Invalid arguments for save()")
+      error("Invalid arguments for save()", 2)
     end
     if method == "w" or method == "a" then
       local file = fs.open(path, method)
@@ -87,7 +87,7 @@
   --  string: data to explode (required).
   function explode(seperator, string)
     if seperator == "" or seperator == nil or string == "" or string == nil then
-      error("Invalid arguments for explode()")
+      error("Invalid arguments for explode()", 2)
     else
       table = {}
       i = 1
@@ -134,7 +134,7 @@
   --  lower: use lowercase letters? (boolean) (optional).
   function random(length, digits, upper, lower)
     if length == nil or length == "" then
-      error("Invalid arguments for random()")
+      error("Invalid arguments for random()", 2)
     end
     if digits == true then
       digits = "on"
@@ -160,7 +160,7 @@
   --  table: the table to dump (required).
   function dump(table)
     if table == nil or table == "" or type(table) ~= "table" then
-      error("Invalid arguments for dump()")
+      error("Invalid arguments for dump()", 2)
     end
     result = ""
     for key, value in pairs(table) do
@@ -174,7 +174,7 @@
   --  api: the library/api to scan (required).
   function scanAPI(api)
     if api == nil or api == "" or type(api) ~= "table" then
-      error("Invalid arguments for scanAPI()")
+      error("Invalid arguments for scanAPI()", 2)
     end
     i = 1
     result = {}
@@ -202,7 +202,7 @@
   --  pos1, pos2: place you want your cursor to be at after the screen clears (optional).
   function clear(screen, pos1, pos2)
     if screen == nil or screen == "" then
-      error("Invalid arguments for clear()")
+      error("Invalid arguments for clear()", 2)
     end
     if pos1 == nil or pos1 == "" and pos2 == nil or pos2 == "" then
       pos1 = 1
@@ -219,7 +219,7 @@
   --  range: the range of ports we should open (max. is a total of 128), separated by a '-'.
   function open(side, range)
     if side == nil or side == "" or range == nil or range == "" then
-      error("Invalid arguments for open()")
+      error("Invalid arguments for open()", 2)
     end
     if string.find(range, "-") then
       rangeTable = kit.explode("-", range)
@@ -241,7 +241,7 @@
   --  range: the range of ports we should close (max. is a total of 128), separated by a '-'.
   function close(side, range)
     if side == nil or side == "" or range == nil or range == "" then
-      error("Invalid arguments for close()")
+      error("Invalid arguments for close()", 2)
     end
     if string.find(range, "-") then
       rangeTable = kit.explode("-", range)
