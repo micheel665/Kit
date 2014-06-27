@@ -57,6 +57,17 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries. Clic
 | [close()](https://github.com/AxTo/Kit#closeside-range)
 | [receive()](https://github.com/AxTo/Kit#receivetimeout)
 
+### version()
+
+| cc  x.x > | Returns current Kit version.|
+| --------- | ------------------------------------------ |
+|Responses: | Data response.					         |
+|Parameters:| None.										 |
+|Example:   | `print( kit.version() )`		     		 |
+|Result:    | The version of your installed Kit copy (eg: `1.1.0`).  |
+
+----------
+
 ### isAdvanced()
 
 | cc  1.45 > | Checks if computer is an advanced computer.|
