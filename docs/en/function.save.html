@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kit Function - kit.save()</title>
+
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><img src="http://assets.gingergaming.com/img/kit/logo-small.png" alt="Kit"></h1>
+        <p>Shorten your ComputerCraft lua code by using Kit! This library, or rather API, has all the functions you need to make your code shorter, better-looking and faster to make.</p>
+        <ul>
+          <li class="button"><a href="../../index.html"><strong>Go back</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1><a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><span style="color: #333;">Function:</span> kit.save(data, path, method)</h1>
+        <div class="offset">
+          <p>
+            Save given data to a new or existing file.
+          </p>
+          <p>
+            Response: Boolean (true or false).
+          </p>
+        </div>
+        
+        <h2>Parameters</h2>
+        <div class="offset">
+          <h3>data <small>(required)</small></h3>
+          <div class="offset">
+            The string you want saved to a file.
+          </div>
+          <h3>path <small>(required)</small></h3>
+            The path to the (new) file, including the file name.
+          <h3>method <small>(required)</small></h3>
+            The method you want for writing to the file. This can be:
+            <ul>
+              <li>'w' to open the file for writing, and remove any existing data on file open.</li>
+              <li>'a' to open the file for writing, but keep existing data and append the new data to the end of the file.</li>
+            </ul>
+        </div>
+        <h2>Examples</h2>
+        <div class="offset">
+          This snippet will demonstrate the 'w' and 'a' saving methods.
+<pre>
+data = "Hello World!\n"
+result = kit.save(data, "/hello.txt", "w")
+if result then
+  print("File was saved!")
+end
+data = "Hello there stranger!"
+result = kit.save(data, "/hello.txt", "a")
+if result then
+  print("File was saved!")
+end
+contents = kit.load("/hello.txt")
+print(contents)
+</pre>
+          The output will be:
+<pre>
+File was saved!
+File was saved!
+Hello World!
+Hello there stranger!
+</pre>
+        </div>
+        <hr>
+      </section>
+      <footer>
+      </footer>
+    </div>
+    <script src="../../javascripts/scale.fix.js"></script>
+  </body>
+</html>
