@@ -39,6 +39,11 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
+h4 {
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+
 a {
   color:#39c;
   font-weight:400;
@@ -185,6 +190,13 @@ header ul a {
   border-left: none;
 }
 
+.button {
+  border-radius: 5px;
+}
+.button a strong{
+  padding-top: 6px;
+}
+
 strong {
   color:#222;
   font-weight:700;
@@ -214,6 +226,11 @@ section {
 
 small {
   font-size:11px;
+}
+
+h3 small {
+  font-size: inherit;
+  color: #ccc;
 }
 
 hr {

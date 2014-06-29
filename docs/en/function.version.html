@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kit Function - kit.version()</title>
+
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><img src="http://assets.gingergaming.com/img/kit/logo-small.png" alt="Kit"></h1>
+        <p>Shorten your ComputerCraft lua code by using Kit! This library, or rather API, has all the functions you need to make your code shorter, better-looking and faster to make.</p>
+        <ul>
+          <li class="button"><a href="../../index.html"><strong>Go back</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1><a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><span style="color: #333;">Function:</span> kit.version()</h1>
+        <div class="offset">
+          <p>
+            Returns the version of your Kit distribution, or the latest version of Kit if using the <i>latest</i> parameter.
+          </p>
+          <p>
+            Response: String response.
+          </p>
+        </div>
+        
+        <h2>Parameters</h2>
+        <div class="offset">
+          <h3>latest <small> (optional)</small></h3>
+          <div class="offset">
+            If this parameter is provided, the function will return the latest stable version of Kit using the HTTP API, instead of returning its own version.
+            <h4>Example</h4>
+              <pre>print( kit.version("latest") )</pre>
+              Result: The latest Kit version, eg: <code>1.1.0</code>
+          </div>
+        </div>
+        <h2>Examples</h2>
+        <div class="offset">
+          This snippet will compare the latest version of Kit with its own version.
+<pre>
+myVersion = kit.version()
+latestVersion = kit.version("latest")
+
+if myVersion == latestVersion then
+  print("My Kit is up to date!")
+else
+  print("My Kit version is diffrent from the newest version!")
+end
+</pre>
+        </div>
+      </section>
+      <footer>
+      </footer>
+    </div>
+    <script src="../../javascripts/scale.fix.js"></script>
+  </body>
+</html>
