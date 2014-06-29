@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Kit Function - kit.version()</title>
+    <title>Kit Function - kit.isAdvanced()</title>
 
     <link rel="stylesheet" href="../../stylesheets/styles.css">
     <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
@@ -22,38 +22,28 @@
         </ul>
       </header>
       <section>
-        <h1><a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><span style="color: #333;">Function:</span> kit.version()</h1>
+        <h1><a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><span style="color: #333;">Function:</span> kit.isAdvanced()</h1>
         <div class="offset">
           <p>
-            Returns the version of your Kit distribution, or the latest version of Kit if using the <i>latest</i> parameter.
+            Checks whether the computer is advanced or not.
           </p>
           <p>
-            Response: String response.
+            Response: Boolean response (true or false).
           </p>
         </div>
         
         <h2>Parameters</h2>
         <div class="offset">
-          <h3>latest <small> (optional)</small></h3>
-          <div class="offset">
-            If this parameter is provided, the function will return the latest stable version of Kit using the HTTP API, instead of returning its own version.
-            <h4>Example</h4>
-              <pre>print( kit.version("latest") )</pre>
-            <h4>Result</h4>
-              The latest Kit version, eg: <code>1.1.0</code>
-          </div>
+          None.
         </div>
         <h2>Examples</h2>
         <div class="offset">
-          This snippet will compare the latest version of Kit with its own version.
+          This snippet checks if the computer is advanced.
 <pre>
-myVersion = kit.version()
-latestVersion = kit.version("latest")
-
-if myVersion == latestVersion then
-  print("My Kit is up to date!")
+if kit.isAdvanced() then
+  print("I'm an advanced computer! I support colors!")
 else
-  print("My Kit version is diffrent from the newest version!")
+  print("I'm just a regular computer.")
 end
 </pre>
         </div>
