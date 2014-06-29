@@ -57,7 +57,7 @@ blockquote {
   padding: 0 0 0 20px;
 }
 blockquote p {
-  margin-bottom: 0;
+  margin-bottom: 5px;
 }
 
 code, pre {
