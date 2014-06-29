@@ -136,7 +136,11 @@ header li.active {
 header li a:hover,
 header li a:focus,
 header li a:active,
-header li a.active {
+header li a.active,
+header li a strong:hover,
+header li a strong:focus,
+header li a strong:active,
+header li a strong.active {
   color: #fff !important;
 }
 header ul a {
