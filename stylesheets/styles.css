@@ -133,6 +133,7 @@ header li:focus,
 header li:active,
 header li.active {
   background: #ff6a00;
+  color: #fff !important;
 }
 
 header ul a {
