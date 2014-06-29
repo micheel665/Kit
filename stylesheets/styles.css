@@ -133,9 +133,13 @@ header li:focus,
 header li:active,
 header li.active {
   background: #ff6a00;
+}
+header li a:hover,
+header li a:focus,
+header li a:active,
+header li a.active {
   color: #fff !important;
 }
-
 header ul a {
   line-height:1;
   font-size:11px;
