@@ -24,6 +24,10 @@ h1, h2, h3 {
 h1 {
   font-size: 28px;
   color: #ff6a00;
+}
+h1,
+h2,
+h3 {
   margin-top: 20px;
 }
 
