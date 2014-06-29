@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Kit Function - kit.version()</title>
+    <title>Kit Function - kit.load()</title>
 
     <link rel="stylesheet" href="../../stylesheets/styles.css">
     <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
@@ -22,40 +22,40 @@
         </ul>
       </header>
       <section>
-        <h1><a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><span style="color: #333;">Function:</span> kit.version(latest)</h1>
+        <h1><a name="" class="anchor" href="#"><span class="octicon octicon-link"></span></a><span style="color: #333;">Function:</span> kit.load(path, isurl)</h1>
         <div class="offset">
           <p>
-            Returns the version of your Kit distribution, or the latest version of Kit if using the <i>latest</i> parameter.
+            Load a file or webpage.
           </p>
           <p>
-            Response: String response.
+            Response: Fetched data response (string). Returns false if an error occurs.
           </p>
         </div>
         
         <h2>Parameters</h2>
         <div class="offset">
-          <h3>latest <small> (optional)</small></h3>
+          <h3>path <small>(required)</small></h3>
           <div class="offset">
-            If this parameter is provided, the function will return the latest stable version of Kit using the HTTP API, instead of returning its own version.
+            The path to the file including the file name.
             <h4>Example</h4>
-              <pre>print( kit.version("latest") )</pre>
+              <pre>print( kit.load("/path/to/file/hello.txt") )</pre>
             <h4>Result</h4>
-              The latest Kit version, eg: <code>1.1.0</code>
+              The contents of hello.txt .
+          </div>
+          <h3>isurl <small>(optional)</small></h3>
+          <div class="offset">
+            Boolean (true). If this parameter is provided, the given <i>path</i> will be processed as a webpage.
+            Please note that this will only work if the HTTP API has been enabled, and the requested webpage domain is whitelisted.
+            <h4>Example</h4>
+              <pre>print( kit.load("http://www.timeapi.org/cet", true) )</pre>
+            <h4>Result</h4>
+              The contents of the webpage (in this case: <a href="http://www.timeapi.org/cet">http://www.timeapi.org/cet</a>).
           </div>
         </div>
         <h2>Examples</h2>
         <div class="offset">
-          This snippet will compare the latest version of Kit with its own version.
-<pre>
-myVersion = kit.version()
-latestVersion = kit.version("latest")
-
-if myVersion == latestVersion then
-  print("My Kit is up to date!")
-else
-  print("My Kit version is diffrent from the newest version!")
-end
-</pre>
+          This snippet will print a random cat fact using the <a href="http://catfacts-api.appspot.com/doc.html">catfacts API website</a>.
+            <pre>print( kit.load("http://catfacts-api.appspot.com/api/facts", true) )</pre>
         </div>
         <hr>
       </section>
