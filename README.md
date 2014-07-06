@@ -16,15 +16,15 @@ Download and install the latest version of Kit manually [here](https://github.co
 
 ## Load the API
 Load the library in your file with a single line of code: 
-```
+```lua
 os.loadAPI("kit")
 ``` 
 Use one of the many functions by doing: 
-```
+```lua
 kit.functionName()
 ```
 This also applies to OpenKit and GuiKit: 
-```
+```lua
 os.loadAPI("openKit")
 openKit.functionName()
 
