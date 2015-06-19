@@ -100,6 +100,22 @@
     end
   end
   
+  -- Implode a table with given separator (string response).
+  -- Parameters:
+  --  separator: implode with this character (required).
+  --  table: table to implode (required).
+  function implode(separator, table)
+    if type(table) ~= "table" or type(separator) ~= "string" or separator == "" then
+      error("Invalid argument(s) for implode()", 2)
+    else
+      result = ""
+      for i = 1, #table do
+        result = result .. separator .. table[i]
+      end
+      return result
+    end
+  end
+
   -- Wait for a keypress (boolean response).
   -- If key is not defined, every key triggers the action.
   -- Parameters:
