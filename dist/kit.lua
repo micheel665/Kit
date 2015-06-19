@@ -1,7 +1,7 @@
   -- Kit v1.1.0 unstable dist. API
   -- Copyright AxTo Inc. Released under the MIT License.
   
-  -- Made for ComputerCraft 1.6 and above.
+  -- Made for ComputerCraft 1.7 and above.
   
   -- How to include the API in your file (assuming that this file is called "kit"):
   -- os.loadAPI("kit")
