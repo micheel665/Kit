@@ -185,7 +185,7 @@
       @param boolean lower Use lowercase letters in the hash? (optional)
       @returns boolean/string Returns random generated hash or false on error.
   ]]--
-  function random(length, digits, upper, lower)
+  function remoteRandom(length, digits, upper, lower)
     if length == nil or length == "" then
       error("Invalid arguments for random()", 2)
     end
@@ -206,6 +206,15 @@
     end
     hash = load("http://www.random.org/strings/?num=1&format=plain&len="..length.."&digits="..digits.."&upperalpha="..upper.."&loweralpha="..lower.."", true)
     return hash
+  end
+  
+  --[[
+      Generate a random hash using a remote API.
+      @deprecated since 2.0.0 Use function remoteRandom() instead.
+      @see remoteRandom()
+  ]]--
+  function random(length, digits, upper, lower)
+    return remoteRandom(length, digits, upper, lower)
   end
 
   --[[
