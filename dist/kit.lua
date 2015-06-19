@@ -364,3 +364,22 @@
       return false
     end
   end
+
+  --[[
+      Check if given variable is empty.
+      The following cases will return true:
+      - An empty table, "[]"
+      - An undefined variable
+      - An empty string, ""
+      - An integer with value 0
+      @param string/integer/table/boolean
+      @returns boolean
+  ]]--
+  function empty(variable)
+    if variable ~= nil or variable == "" or variable == 0 then
+      return false
+    elseif type(variable) == "table" and variable[1] ~= nil then
+      return false
+    end
+    return true
+  end
