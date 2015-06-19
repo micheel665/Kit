@@ -10,7 +10,7 @@ Download and install the latest version of Kit manually [here](https://github.co
 - OpenKit pastebin install: `pastebin get eqdNPkkb install-openkit`.
 - GuiKit pastebin install: `pastebin get guJxNvsS install-guikit`
 
-> __Heads Up:__ The current versions of Kit, OpenKit and GuiKit are unstable and can contain typo's, errors and bugs.
+> __Heads Up:__ The current versions of Kit, OpenKit and GuiKit are unstable and can contain typo's, errors and bugs. If you encounter one, please [create a new issue](https://github.com/AxTo/Kit/issues) if it hasn't been reported yet.
 
 # Documentation
 
