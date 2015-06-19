@@ -71,9 +71,11 @@ __GuiKit Functions__ | __Description__
 | cc  x.x > | Returns current Kit version.|
 | --------- | ------------------------------------------ |
 |Responses: | Data response.					         |
-|Parameters:| None.										 |
-|Example:   | `print( kit.version() )`		     		 |
+|Parameters:| _getLatest_: Get the latest version of Kit instead of the local version. |
+|Example 1: | `print( kit.version() )`		     		 |
 |Result:    | The version of your installed Kit copy (eg: `1.1.0`).  |
+|Example 2: | `print( kit.version(true) )`    |
+|Result:    | The latest version of Kit (eg: `1.3.0`). |
 
 ----------
 
