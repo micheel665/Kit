@@ -1,4 +1,4 @@
-  -- Kit v1.1.0 unstable dist. API
+  -- Kit v1.3.0 unstable dist. API
   -- Copyright AxTo Inc. Released under the MIT License.
   
   -- Made for ComputerCraft 1.7 and above.
@@ -10,7 +10,7 @@
   
   -- Returns Kit version (data response).
   function version()
-    return "1.1.0"
+    return "1.3.0"
   end
   
   -- Chceks if computer is an advanced computer (boolean response).
