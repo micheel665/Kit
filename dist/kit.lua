@@ -5,6 +5,7 @@
     http://git.io/kitdocs
 
     Made for ComputerCraft 1.7 and above.
+    http://computercraft.info
 
     How to include the API in your file (assuming that this file is called "kit"):
     os.loadAPI("kit")
