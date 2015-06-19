@@ -115,7 +115,7 @@
       @returns table
   ]]--
   function explode(separator, string)
-    if separator == "" or separator == nil or string == "" or string == nil then
+    if type(separator) ~= "string" or separator == "" or type(string) ~= "string" or string == "" then
       error("Invalid arguments for explode()", 2)
     else
       table = {}
