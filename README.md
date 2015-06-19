@@ -48,7 +48,7 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries. Clic
 | [save()](https://github.com/AxTo/Kit/blob/master/README.md#savedata-path-method)| Save data to a file.
 | [explode()](https://github.com/AxTo/Kit/blob/master/README.md#explodeseperator-string)| Explode a string by seperator.
 | [keyPress()](https://github.com/AxTo/Kit/blob/master/README.md#keypresskey-exitonfalse)| Detect a key press.
-| [random()](https://github.com/AxTo/Kit/blob/master/README.md#randomlength-digits-upper-lower)| Random string generator.
+| [remoteRandom()](https://github.com/AxTo/Kit/blob/master/README.md#remoterandomlength-digits-upper-lower)| Random string generator, using the HTTP API.
 | [dump()](https://github.com/AxTo/Kit/blob/master/README.md#dumptable)| Dump the contents of a table.
 | [scanAPI()](https://github.com/AxTo/Kit/blob/master/README.md#scanapiapi) | Scan an API for its functions.
 | [help()](https://github.com/AxTo/Kit/blob/master/README.md#help) | Get help info for Kit.
@@ -56,6 +56,7 @@ Below is a list of all functions in the Kit, OpenKit  and GuiKit libraries. Clic
 | [open()](https://github.com/AxTo/Kit#openside-range) | Open modem channels.
 | [close()](https://github.com/AxTo/Kit#closeside-range) | Close modem channels.
 | [receive()](https://github.com/AxTo/Kit#receivetimeout) | Listen for modem messages on open channels.
+| empty() | Check if the given variable is empty.
 __[OpenKit Functions](https://github.com/AxTo/Kit/blob/master/README.md#openkit-functions)__ | __Description__
 [getPosition()](https://github.com/AxTo/Kit/blob/master/README.md#getpositionplayer-side)| Get current position of a player relative to the sensor.
 |checkPosition() |
@@ -151,7 +152,7 @@ __GuiKit Functions__ | __Description__
 
 ----------
 
-### random(length, digits, upper, lower)
+### remoteRandom(length, digits, upper, lower)
 
 |  cc 1.1 >  | Generate a random hash |
 |------------|--------------------------------------------------|
@@ -165,6 +166,8 @@ __GuiKit Functions__ | __Description__
 |Example 2:  | `result = kit.random(12, true, true, true) print(result)` |
 |Result:     | Example: `D9NqLaN1hkkHEU` |
 > __Heads Up:__ the random function uses the HTTP API, make sure to enable it in your CC Config.
+
+> __Another Heads Up:__ In Kit 1.2.0 < this function was called `random`.
 
 ----------
 
