@@ -268,8 +268,8 @@
       @returns boolean
   ]]--
   function clear(screen, pos1, pos2)
-    if screen == nil or screen == "" then
-      error("Invalid arguments for clear()", 2)
+    if type(screen) ~= "table" then
+        error("Invalid argument for clear()", 2)
     end
     if pos1 == nil or pos1 == "" and pos2 == nil or pos2 == "" then
       pos1 = 1
