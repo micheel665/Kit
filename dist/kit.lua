@@ -47,7 +47,7 @@
     end
     if isurl == true then
       local file = http.get(path)
-      if file == nil then
+      if file == nil or file == false then
         error("Loading webpage failed.")
       end
       local data = file.readAll()
