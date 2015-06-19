@@ -9,8 +9,12 @@
   -- kit.functionName()
   
   -- Returns Kit version (data response).
-  function version()
-    return "1.3.0"
+  function version(getLatest)
+    if getLatest then
+      return load("https://raw.githubusercontent.com/AxTo/Kit/master/version", true)
+    else
+      return "1.3.0"
+    end
   end
   
   -- Chceks if computer is an advanced computer (boolean response).
