@@ -17,7 +17,6 @@ function InitializeAPI()
 	nativeScreen = term.current()
 end
 
-
 -- Draw a rectangle (Window response).
 -- Parameters: 
 --  startX: The starting X pos of the square (number) (required).
@@ -50,7 +49,6 @@ function drawRectangle(startX, startY, width, height, color, func, windowObject,
   
 end
 
-
 -- Print text to a rectangle (no response).
 -- Parameters: 
 --  x: The starting X pos of the text (number) (required).
@@ -58,7 +56,6 @@ end
 --  str: The string to be printed (string) (required). --need to check if nil could also work
 --  windowObject: The parent window of the text, when in doubt use getNativeScreen (window) (required).
 --  exists: A Boolean which determines if the rectangle needs to be registered, not important for coders (boolean).
-
 function printTextToRectangle(x, y, str, windowObject ,exists)
 	--[[
 		TODO:
@@ -92,7 +89,7 @@ end
 function getRectangleByPos(x, y)
    --[[
 		Complete, for now
-	]]--
+   ]]--
 
    for i, v in ipairs(windowTable) do
       if windowTable[i][2][1] <= x and windowTable[i][2][3] + windowTable[i][2][1] >= x and windowTable[i][2][2] <= y and windowTable[i][2][4] + windowTable[i][2][2] >= y then
@@ -146,7 +143,6 @@ function buttonCheck()
    end
 end
 
-
 -- Redraws the whole screen, do not use every single tick as it will flicker (no response)
 function refreshScreen()
    --[[
@@ -168,12 +164,8 @@ function refreshScreen()
 		end
 	  end
    end
-   
 	term.redirect(term.native())
 end
-
-
-
 
 -- Get the table in which all the windows are stored (table response).
 function getWindowTable()
