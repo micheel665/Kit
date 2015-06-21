@@ -126,13 +126,12 @@ end
 -- The loop where the computer checks if a button was pressed (place in programs main loop, see wiki)
 function buttonCheck()
     --[[
-		TODO:
-		1. fix the timer
+		Complete, for now
 	]]--
 
    for i, v in ipairs(windowTable) do
 	  local eventToCatch = "mouse_click"
-	  local timeout = os.startTimer(2)
+	  local timeout = os.startTimer(1)
 	  local e, arg1, x, y = os.pullEvent()
       if e == 'timer' and arg1 == timeout then
 	  elseif e == 'mouse_click' and windowTable[i][2][6] ~= nil and windowTable[i][2][1] <= x and windowTable[i][2][3] + windowTable[i][2][1] >= x and windowTable[i][2][2] <= y and windowTable[i][2][4] + windowTable[i][2][2] >= y then
