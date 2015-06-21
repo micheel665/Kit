@@ -123,23 +123,26 @@ function removeRectangle()
 	]]--
 end
 
--- The loop where the computer checks if a button was pressed (place in programs main loop, see wiki)
+-- The function where the computer checks if a button was pressed (place in programs main loop, see wiki)
 function buttonCheck()
     --[[
 		Complete, for now
 	]]--
-
-   for i, v in ipairs(windowTable) do
-	  local eventToCatch = "mouse_click"
-	  local timeout = os.startTimer(1)
-	  local e, arg1, x, y = os.pullEvent()
-      if e == 'timer' and arg1 == timeout then
-	  elseif e == 'mouse_click' and windowTable[i][2][6] ~= nil and windowTable[i][2][1] <= x and windowTable[i][2][3] + windowTable[i][2][1] >= x and windowTable[i][2][2] <= y and windowTable[i][2][4] + windowTable[i][2][2] >= y then
-		local func = windowTable[i][2][6]
-		func()
-		
+   
+   local eventToCatch = "mouse_click"
+   local timeout = os.startTimer(0.05)
+   local e, arg1, x, y = os.pullEvent()
+	  
+   if e == 'mouse_click' then 
+      local func = nil
+	  for i, v in ipairs(windowTable) do
+	     if windowTable[i][2][6] ~= nil and windowTable[i][2][1] <= x and windowTable[i][2][3] + windowTable[i][2][1] >= x and windowTable[i][2][2] <= y and windowTable[i][2][4] + windowTable[i][2][2] >= y then
+		    func = windowTable[i][2][6]
+		 end
 	  end
+	  func()
    end
+	  
 end
 
 -- Redraws the whole screen, do not use every single tick as it will flicker (no response)
